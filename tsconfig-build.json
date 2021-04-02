@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "files": [],
+  "references": [
+    {
+      "path": "packages/another-nodejs-test-runner/tsconfig-build.json"
+    }
+  ]
+}
