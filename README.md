@@ -1,7 +1,5 @@
 # another-nodejs-test-runner
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
 ### Main Features
 
 1. NO (!!!) monkey-path/override of any thing NodeJS (this, console.log, global, process, ...).
@@ -39,3 +37,5 @@
 
 1. I can't do it alone. the time is not the problem, the ideas for new features MUST come from us all.
 2. Feel free to change anything you want. if you are unsure, file an issue first.
+
+-
