@@ -2,7 +2,7 @@ import async from 'async'
 import os from 'os'
 
 type Job = {
-  testFilePath: string
+  readonly testFilePath: string
 }
 
 // run multiple test-files in different threads. each test-file run all tests in a sequence (concurrency=1)

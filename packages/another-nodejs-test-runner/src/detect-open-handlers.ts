@@ -4,7 +4,7 @@
 import * as asyncHooks from 'async_hooks'
 import { ErrorWithStack } from 'jest-util'
 
-function stackIsFromUser(stack: string) {
+function stackIsFromUser(stack: string): boolean {
   if (stack.includes('bb')) {
     return true
   }
@@ -27,15 +27,16 @@ function stackIsFromUser(stack: string) {
   return false
 }
 
-const alwaysActive = () => true
+const alwaysActive = (): boolean => true
 
 // Inspired by https://github.com/mafintosh/why-is-node-running/blob/master/index.js
 // Extracted as we want to format the result ourselves
-export function collectHandles(): () => Array<Error> {
+export function collectHandles(): () => ReadonlyArray<Error> {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const activeHandles: Map<number, { error: Error; isActive: () => boolean }> = new Map()
+  const activeHandles: ReadonlyMap<number, { readonly error: Error; readonly isActive: () => boolean }> = new Map()
   const hook = asyncHooks.createHook({
     destroy(asyncId) {
+      // @ts-ignore
       activeHandles.delete(asyncId)
     },
     init: function initHook(asyncId, type, _triggerAsyncId, resource: {} | NodeJS.Timeout) {
@@ -45,6 +46,7 @@ export function collectHandles(): () => Array<Error> {
       const error = new ErrorWithStack(type, initHook)
 
       if (stackIsFromUser(error.stack || '')) {
+        // eslint-disable-next-line functional/no-let
         let isActive: () => boolean
 
         if (type === 'Timeout' || type === 'Immediate') {
@@ -59,6 +61,7 @@ export function collectHandles(): () => Array<Error> {
           // Any other async resource
           isActive = alwaysActive
         }
+        // @ts-ignore
         activeHandles.set(asyncId, { error, isActive })
       }
     },
@@ -66,7 +69,7 @@ export function collectHandles(): () => Array<Error> {
 
   hook.enable()
 
-  return (): Array<Error> => {
+  return (): ReadonlyArray<Error> => {
     hook.disable()
 
     // Get errors for every async resource still referenced at this moment
@@ -74,6 +77,7 @@ export function collectHandles(): () => Array<Error> {
       .filter(({ isActive }) => isActive())
       .map(({ error }) => error)
 
+    // @ts-ignore
     activeHandles.clear()
     return result
   }

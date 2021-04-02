@@ -2,7 +2,7 @@
 
 import yargs from 'yargs'
 
-function main() {
+function main(): void {
   const { argv } = yargs(process.argv.slice(2)).options({
     a: { type: 'boolean', default: false },
     b: { type: 'string', demandOption: true },

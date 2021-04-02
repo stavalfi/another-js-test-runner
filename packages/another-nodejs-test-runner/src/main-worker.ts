@@ -1,6 +1,6 @@
 import { Worker, MessageChannel, receiveMessageOnPort } from 'worker_threads'
 
-export async function parse(str: string) {
+export async function parse(str: string): Promise<string> {
   return new Promise((resolve, reject) => {
     const worker = new Worker(
       require.resolve(__filename.includes('.ts') ? '../dist/src/aonther-worker.js' : './aonther-worker.js'),
@@ -18,7 +18,7 @@ export async function parse(str: string) {
   })
 }
 
-async function main() {
+async function main(): Promise<void> {
   console.log(await parse('hi'))
 }
 

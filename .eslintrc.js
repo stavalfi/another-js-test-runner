@@ -1,5 +1,15 @@
 module.exports = {
-  extends: ['airbnb-typescript/base', 'prettier/@typescript-eslint'],
+  plugins: ['functional', 'radar', 'promise', 'clean-regex', 'no-secrets'],
+  extends: [
+    'airbnb-typescript/base',
+    'prettier/@typescript-eslint',
+    'plugin:radar/recommended',
+    'plugin:functional/external-recommended',
+    'plugin:functional/recommended',
+    'plugin:promise/recommended',
+    'plugin:clean-regex/recommended',
+    'plugin:jsonc/base',
+  ],
   parserOptions: {
     project: ['./packages/**/tsconfig-build.json'],
   },
@@ -11,5 +21,15 @@ module.exports = {
     'arrow-parens': 'off',
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'fp/no-throw': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'functional/functional-parameters': 'off',
+    'functional/no-expression-statement': 'off',
+    'functional/no-conditional-statement': 'off',
+    'functional/no-class': 'off',
+    'functional/no-this-expression': 'off',
+    'functional/no-return-void': 'off',
+    'promise/avoid-new': 'off',
+    'promise/no-callback-in-promise': 'off',
   },
 }

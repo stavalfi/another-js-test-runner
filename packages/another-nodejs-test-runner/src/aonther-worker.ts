@@ -1,6 +1,6 @@
 import { parentPort, workerData } from 'worker_threads'
 
-function main() {
+function main(): void {
   const str = workerData.payload
   parentPort!.postMessage(`${str}1`)
 }

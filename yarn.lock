@@ -331,7 +331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:4.20.0":
+"@typescript-eslint/experimental-utils@npm:4.20.0, @typescript-eslint/experimental-utils@npm:^4.9.1":
   version: 4.20.0
   resolution: "@typescript-eslint/experimental-utils@npm:4.20.0"
   dependencies:
@@ -486,9 +486,15 @@ __metadata:
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^7.2.0
     eslint-import-resolver-node: ^0.3.4
+    eslint-plugin-clean-regex: ^0.5.1
+    eslint-plugin-functional: ^3.2.1
     eslint-plugin-import: ^2.22.0
+    eslint-plugin-jsonc: ^1.2.1
     eslint-plugin-jsx-a11y: ^6.3.1
+    eslint-plugin-no-secrets: ^0.8.9
     eslint-plugin-prettier: ^3.3.1
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-radar: ^0.2.1
     eslint-plugin-react: ^7.20.3
     eslint-plugin-react-hooks: ^4.0.8
     ink: ^3.0.8
@@ -1111,6 +1117,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deepmerge@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "deepmerge@npm:4.2.2"
+  checksum: 85abf8e0045ee280996e7d2396979c877ef0741e413b716e42441110e0a83ac08098b2a49cea035510060bf667c0eae3189b2a52349f5fa4b000c211041637b1
+  languageName: node
+  linkType: hard
+
 "define-properties@npm:^1.1.3":
   version: 1.1.3
   resolution: "define-properties@npm:1.1.3"
@@ -1284,6 +1297,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escape-string-regexp@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "escape-string-regexp@npm:4.0.0"
+  checksum: c747be8d5ff7873127e3e0cffe7d2206a37208077fa9c30a3c1bb4f26bebd081c8c24d5fba7a99449f9d20670bea3dc5e1b6098b0f074b099bd38766271a272f
+  languageName: node
+  linkType: hard
+
 "eslint-config-airbnb-base@npm:^14.2.0, eslint-config-airbnb-base@npm:^14.2.1":
   version: 14.2.1
   resolution: "eslint-config-airbnb-base@npm:14.2.1"
@@ -1357,6 +1377,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-clean-regex@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "eslint-plugin-clean-regex@npm:0.5.1"
+  dependencies:
+    refa: ^0.7.1
+    regexpp: ^3.1.0
+  checksum: 96210a4c0889f744868b2c7e419cac7d11a40604d7c23fbdfa93f46eb3c9a5d36cdb4c73a721613ab2b544668b34e3b1b2f68b113a297d305fe9fae9c9d6ee74
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-functional@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "eslint-plugin-functional@npm:3.2.1"
+  dependencies:
+    "@typescript-eslint/experimental-utils": ^4.9.1
+    array.prototype.flatmap: ^1.2.4
+    deepmerge: ^4.2.2
+    escape-string-regexp: ^4.0.0
+    object.fromentries: ^2.0.3
+  peerDependencies:
+    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
+    typescript: ^3.4.1 || ^4.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: e934d6c391261fbfc3d83957e56c21035b87cc621e6fe157519c678c385b2f7196e4419136327def2510a000c6c440adc19f4dc976d7c046696ef3f356dc2a60
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-import@npm:*, eslint-plugin-import@npm:^2.22.0":
   version: 2.22.1
   resolution: "eslint-plugin-import@npm:2.22.1"
@@ -1377,6 +1426,19 @@ __metadata:
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
   checksum: 35ae09ceae6f0fe239f6b72e134d58d74762ad1ed0f57aa989affb856354e46bc082bb6df9399b624989107efb9ab9af2c91c08f03c0c70c5cb46a37676591ec
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-jsonc@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "eslint-plugin-jsonc@npm:1.2.1"
+  dependencies:
+    eslint-utils: ^2.1.0
+    jsonc-eslint-parser: ^1.0.0
+    natural-compare: ^1.4.0
+  peerDependencies:
+    eslint: ^5.0.0 || >=6.0.0
+  checksum: cd9479efa96337858c347700eb5968e71c6c80c762c6772eee61d400d2fcf784456ab3599d2875ff9d2f6a9dab42ea56aca64c4f3788b063e320216fbbb22234
   languageName: node
   linkType: hard
 
@@ -1401,6 +1463,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-no-secrets@npm:^0.8.9":
+  version: 0.8.9
+  resolution: "eslint-plugin-no-secrets@npm:0.8.9"
+  peerDependencies:
+    eslint: ">=3.0.0"
+  checksum: aefe3412af74b32157b0690a1cb8f4cc019fbf029669557e4b0734cec6fa9a9b3ec0d89567b500d07b8616af4814da3a217fb97989ad1f55c2dabec775fcd23e
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-prettier@npm:^3.3.1":
   version: 3.3.1
   resolution: "eslint-plugin-prettier@npm:3.3.1"
@@ -1413,6 +1484,22 @@ __metadata:
     eslint-config-prettier:
       optional: true
   checksum: cf35b0f0e9ef30782fe82913db92f6874181723d77f0c4613f9d69c87069f73d0dc420ef850ebc844613c00a8e87eb9762a36b7d028334c5c7b091763118347b
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-promise@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "eslint-plugin-promise@npm:4.3.1"
+  checksum: 01aa61c2bea6cfd2e612cda9aaaf079c7652503dd613248a251c99b58414245ee999a8f5ca0a15f62c6b1605aca4dcbace272d67f22d79aac3f698547eb75d9a
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-radar@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "eslint-plugin-radar@npm:0.2.1"
+  peerDependencies:
+    eslint: ">= 3.0.0 <= 7.x.x"
+  checksum: 120e130e22376a43708611b43da2955142c55cd7ad0a770225364df3164fb1d084f7284d1763261573ab5efe6e635345ea44badb3f8cdc71ed763becd26b8da3
   languageName: node
   linkType: hard
 
@@ -1537,7 +1624,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^7.3.0, espree@npm:^7.3.1":
+"espree@npm:^6.0.0 || ^7.2.0, espree@npm:^7.3.0, espree@npm:^7.3.1":
   version: 7.3.1
   resolution: "espree@npm:7.3.1"
   dependencies:
@@ -2476,6 +2563,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonc-eslint-parser@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "jsonc-eslint-parser@npm:1.0.1"
+  dependencies:
+    eslint-utils: ^2.1.0
+    eslint-visitor-keys: ^2.0.0
+    espree: ^6.0.0 || ^7.2.0
+  checksum: 61379317173dd2a2799ec72507278d1514634b7ca9704fd6b44275849616bf829789386297bfff58e07c7a33f31e464cfb9ae558c2e8a513ec34aa1593b79479
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^4.0.0":
   version: 4.0.0
   resolution: "jsonfile@npm:4.0.0"
@@ -2744,9 +2842,15 @@ __metadata:
     eslint-config-airbnb-typescript: ^12.3.1
     eslint-config-prettier: ^7.2.0
     eslint-import-resolver-node: ^0.3.4
+    eslint-plugin-clean-regex: ^0.5.1
+    eslint-plugin-functional: ^3.2.1
     eslint-plugin-import: ^2.22.0
+    eslint-plugin-jsonc: ^1.2.1
     eslint-plugin-jsx-a11y: ^6.3.1
+    eslint-plugin-no-secrets: ^0.8.9
     eslint-plugin-prettier: ^3.3.1
+    eslint-plugin-promise: ^4.3.1
+    eslint-plugin-radar: ^0.2.1
     eslint-plugin-react: ^7.20.3
     eslint-plugin-react-hooks: ^4.0.8
     husky: ^5.1.1
@@ -2951,7 +3055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.fromentries@npm:^2.0.4":
+"object.fromentries@npm:^2.0.3, object.fromentries@npm:^2.0.4":
   version: 2.0.4
   resolution: "object.fromentries@npm:2.0.4"
   dependencies:
@@ -3394,6 +3498,15 @@ __metadata:
     pify: ^4.0.1
     strip-bom: ^3.0.0
   checksum: 5307a4a4dd89be89de2677c30fce45de53f7d199ef4ada1be55ad589756798dafeccc9f21b6affae1333c30b4af997b1b1b2ad21746095f98c6a2528ca8e5dfe
+  languageName: node
+  linkType: hard
+
+"refa@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "refa@npm:0.7.1"
+  dependencies:
+    regexpp: ^3.1.0
+  checksum: bf890bdf06e3dfa788a03efda0be5163d405ac9b350c6a080551ebf56655ba3b3f9763f06bf1a194c0bf336c8e1040c24bdcebf32c3a37f4c28e53f089e9ea1f
   languageName: node
   linkType: hard
 
