@@ -34,5 +34,5 @@ dist
 !.yarn/sdks
 !.yarn/versions
 compiled-era-ci-*.js
-.husky
-!husky/pre-commit
+.husky/_
+.husky/.gitignore
