@@ -9,7 +9,6 @@
     "postpublish": "pinst --enable",
     "lint:code": "eslint --cache --max-warnings 0 'packages/**/src/**/*.{ts,d.ts}'",
     "lint:versions": "syncpack list-mismatches",
-    "lint:staged-files": "yarn lint-staged && yarn pretty-quick --staged && yarn build && yarn lint:versions",
     "test": "#",
     "make-executable": "chmod +x packages/another-nodejs-test-runner/dist/src/index.js",
     "clean": "yarn tsc -b tsconfig-build.json --clean",

@@ -34,7 +34,12 @@ jobs:
           path: .eslintcache
           key: eslint-cache
 
-      - name: Yarn Install
+      - name: Installing
         run: yarn install --immutable
-      - name: Typescript Build
+      - name: Compiling
         run: yarn build
+      - name: Linting
+        run: |
+          yarn pretty-quick --branch main --check
+          yarn lint:versions
+          yarn lint:code
