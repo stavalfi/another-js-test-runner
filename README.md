@@ -37,3 +37,5 @@
 
 1. I can't do it alone. the time is not the problem, the ideas for new features MUST come from us all.
 2. Feel free to change anything you want. if you are unsure, file an issue first.
+
+-
