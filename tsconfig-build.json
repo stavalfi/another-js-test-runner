@@ -3,7 +3,7 @@
   "files": [],
   "references": [
     {
-      "path": "packages/another-nodejs-test-runner/tsconfig-build.json"
+      "path": "packages/package1/tsconfig-build.json"
     }
   ]
 }

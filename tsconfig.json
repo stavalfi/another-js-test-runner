@@ -18,7 +18,7 @@
     "composite": true,
     "baseUrl": "packages",
     "paths": {
-      "another-nodejs-test-runner": ["another-nodejs-test-runner/src/index.ts"]
+      "package1": ["package1/src/index.ts"]
     }
   }
 }
